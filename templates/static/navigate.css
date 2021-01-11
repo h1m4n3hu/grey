@@ -1,0 +1,47 @@
+*{
+    font-family: 'Alata', sans-serif;
+}
+
+.nava{
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	background-color: grey;
+	height: 62px;
+}
+
+.headin{
+	font-size: calc(20px + 1vw);
+	color: white;
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-left: 2vw;
+}
+.headin:hover{
+	color: lightgrey;
+	transition: 1s;
+}
+
+.topics{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.comp{
+    width: calc(250px + 2vw);
+    height: calc(150px + 2vw);
+    border: black  2px solid;
+    border-radius: 10px;
+    background-color: white;
+    outline: none;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+.comp4{
+    background-color: darkgreen;
+    color: white;
+}

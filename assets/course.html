@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (min-width: 600px)" href="{% static 'static/all.css' %}">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="{% static 'static/small.css' %}">
+    <!--link rel="stylesheet" href="{% static 'static/all.css' %}"-->
+    <!--link rel="stylesheet" media="screen and (min-width: 600px)" href="static/all.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="static/small.css"-->
+    <!--link rel="stylesheet" href="static/all.css"-->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <title>{{crs}}</title>
+</head>
+<body>
+
+
+<div class="nava">
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+            </button>
+        <a class="headin" href="{% url 'home' %}"><b><u>GREYCOLOR</u></b></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+            <li class="active"><a href="{% url 'home' %}">Home</a></li>
+            <!--li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Courses<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="{% url 'navigate' %}">VIEW ALL</a></li>
+                    <hr>
+                    <li><a href="pygame/1">Pygame</a></li>
+                    <li><a href="socket/1">Socket</a></li>
+                    <li><a href="djangocc/1">Django Crash Course</a></li>
+                    <li><a href="gitandvsc/1">Git and VSCode</a></li>
+                </ul>
+            </li-->
+            <li><a href="{% url 'navigate' %}">Courses</a></li>
+            <li><a href="certifications">Certification</a></li>
+            <!--li><a href="#">Nothing</a></li-->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <!--li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li-->
+            <li><a href="working with us">JOIN THE TEAM</a></li>
+        </ul>
+        </div>
+    </div>
+</nav>
+</div>
+
+<center>
+<br><br><br>
+<h1>{{crs}}</h1>
+<br>
+<form method="post">
+{% csrf_token %}
+<input type="hidden" id="varcon" name="count" value="{{count}}"></input>
+<input type="hidden" id="varall" name="all" value="{{all}}"></input>
+<div class="vidd">
+{{vid |safe}}
+</div>
+
+<br>
+<input type="submit" name="back" id="back" onclick="trow()" class="control" value="BACK"></input>
+<input type="submit" name="next" id="back" onclick="trow()" class="control" value="NEXT"></input>
+</form><br><br>
+{% if messages %}
+{% for message in messages %}
+<script>
+    alert('{{ message }}');
+</script>
+{% endfor %}
+{% endif %}
+</center>
+<div class="code">
+<center><div class="name1">{{name1|safe}}</div></center>
+<div class="code1"><pre>{{file1|safe}}</pre></div>
+<br>
+</div>
+<div class="code">
+<center><div class="name2">{{name2|safe}}</div></center>
+<div class="code2"><pre>{{file2|safe}}</pre></div>
+<br>
+</div>
+<div class="code">
+<center><div class="name3">{{name3|safe}}</div></center>
+<div class="code3"><pre>{{file3|safe}}</pre></div>
+</div>
+
+<br><br><br><br>
+
+<div class="footerr">
+    <div class="coll coll1"><a class="headin" href="https://www.youtube.com/channel/UCIehHDtMHU7mktmaNcA4mxQ?sub_confirmation=1"><b><u>CODEGREY</u></b></a></div>
+    <div class="coll coll2"></div>
+    <div class="coll coll3">
+        <a class="botlink" href="contact">-contact</a><br>
+        <a class="botlink" href="working with us">-join the team</a><br>
+        <a class="botlink" href="promoting your work">-promote your work</a><br>
+        <a class="botlink" href="certificatons">-get certified</a><br>
+    </div>
+    <div class="coll coll4">
+        <a class="botlink">-create a developers account</a><br>
+    </div>
+</div>
+
+</body>
+</html>

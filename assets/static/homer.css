@@ -6,8 +6,8 @@
 	position: fixed;
 	top: 0px;
 	width: 100%;
-	background-color: grey;
-	height: 62px;
+    background-color: rgb(37,37,37);
+    height: 58px;
 }
 
 .headin{
@@ -16,13 +16,81 @@
 	margin-left: 40px;
 	margin-right: 40px;
     margin-left: 2vw;
-    transition: 0.5 ease;
+    transition: 0.5s ease;
 }.headin:hover{
 	color: lightgrey;
 }
 
 .dropdown:hover .dropdown-menu{
     display: block;
+}
+
+.quote{
+    font-size: 30px;
+}
+
+.major{
+    margin-top: -10px;
+    width: 100%;
+    height: 1300px;
+    background-image: url("https://cdn.statically.io/img/cdn.hipwallpaper.com/i/2/47/GzJZw2.jpg");
+    background-repeat: no-repeat;
+}
+
+.lefter{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boix{
+    min-height: 100px;
+    width: 80%;
+    margin-top: 30px;
+    border: 0px black solid;
+}
+.boix2,.boix3,.boix5,.boix6{
+    color: rgb(150, 150, 150);
+}
+
+p{
+    font-size: 15px;
+}
+  
+.trending{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    text-decoration: none !important;
+    color: #ff003b;
+    border: 0px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+}
+.trending span{
+    position: relative;
+    z-index: 2;
+}
+.trending:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff003b;
+    transition: all .35s;
+}
+.trending:hover{
+    color: #fff;
+}
+.trending:hover:after{
+    width: 100%;
 }
 
 .topics{
@@ -41,7 +109,6 @@
     border-radius: 10px;
     background-color: white;
     outline: none;
-    margin-top: 4vh;
     margin-bottom: 4vh;
     background-size: contain;
     transition: .2s ease;
@@ -50,14 +117,10 @@
     justify-content: space-around;
 }
 
-.comp1{background-image: url("https://www.xda-developers.com/files/2018/06/android-messages-chat-feature.png");}
-.comp2{background-image: url("https://writeabout.tech/wp-content/uploads/2019/07/pygame-1280x720.png");}
+.comp1{background-image: url("https://leeds.tech/wp-content/uploads/2018/12/getty-messaging.jpg");}
+.comp2{background-image: url("https://colorlib.com/wp/wp-content/uploads/sites/2/JavaScript-logo.png");}
 .comp3{background-image: url("https://miro.medium.com/max/3200/1*3jkT7LUG3R41RDp10g0hrQ.png");}
 .comp4{background-image: url("https://meterpreter.org/wp-content/uploads/2018/09/django-768x418.png");}
-.comp5{background-image: url("https://img-a.udemycdn.com/course/750x422/2292187_3527_5.jpg");}
-.comp6{background-image: url("https://res.cloudinary.com/practicaldev/image/fetch/s--LKvNCPB_--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/orzqipasg2192qrw0kho.png");}
-.comp7{background-image: url("https://meterpreter.org/wp-content/uploads/2018/09/django-768x418.png");}
-.comp8{background-image: url("https://pixelmechanics.com.sg/wp-content/uploads/2019/04/css-1200x667.jpg");}
 
 .mine{
     background-color: rgba(0, 0, 0, 0);
@@ -69,32 +132,6 @@
     background-color: rgba(0, 0, 0, 0.5);
     color: rgba(255, 255, 255, 1);
     box-shadow: 10px 10px 10px black;
-}
-
-.code{
-    display: grid;
-    grid-template-columns: 30% 85%;
-    align-items: center;
-    overflow: hidden;
-}
-
-pre{
-    background-color: #000 !important;
-    color: rgb(170, 104, 104) !important;
-    width: 70%;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-}
-
-.control{
-    border: 0px black solid;
-    background-color: white;
-    padding: 4px 8px 4px 8px;
-    font-size: large;
-    transition: 0.5s ease;
-}.control:hover{
-    background-color: black;
-    color: white;
 }
 
 .footerr{
@@ -122,3 +159,5 @@ pre{
 .botlink{
     text-decoration: none !important;
 }
+
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (min-width: 600px)" href="{% static 'static/homer.css' %}">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="{% static 'static/small.css' %}">
+    <!--link rel="stylesheet" href="{% static 'static/all.css' %}">
+    <link rel="stylesheet" href="static/homer.css">
+    <link rel="stylesheet" media="screen and (min-width: 600px)" href="static/homer.css>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="static/hmall.css"-->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <title>CODEGREY | Home</title>
+</head>
+<body>
+
+<div class="nava">
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+            </button>
+        <a class="headin" href="{% url 'home' %}"><b><u>GREYCOLOR</u></b></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+            <li class="active"><a>Home</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">Courses<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                <li><a href="{% url 'navigate' %}">VIEW ALL</a></li>
+                <hr>
+                <li><a href="pygame/1">Pygame</a></li>
+                <li><a href="socket/1">Socket</a></li>
+                <li><a href="djangocc/1">Django Crash Course</a></li>
+                <li><a href="gitandvsc/1">Git and VSCode</a></li>
+                </ul>
+            </li>
+            <li><a href="certifications">Certification</a></li>
+            <!--li><a href="#">Nothing</a></li-->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <!--li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li-->
+            <li><a href="working with us">JOIN THE TEAM</a></li>
+        </ul>
+        </div>
+    </div>
+</nav>
+</div>
+
+<br><br>
+<div class="major">
+<div class="lefter">
+    <div class="boix boix1"></div>
+    <div class="boix boix2">
+        <p class="quote">"When life never stops teaching, why should we stop learning?"</p>
+    </div>
+    <div class="boix boix3">
+    <p>
+        Team GreyColor firmly believes in the above statement which indeed encompasses the fundamental & inalienable thought that the flourishment of the society demands the elixir of learning. This principle underlying the fact has aquired a prestigious stature as it lays down a core manifestation which embarks the foundation of modernisation as we see it today. Pursuant to this ideology, Team Grey Color initiative aims not only to contribute towards upliftment of the courageous fingers to code more, but also attempts to expand awareness amongst general sections of the society to make them more aware and informed about the fact that "Today might be THE day", as yet the ultimate objective of Learning remains to be Growth of people.</p>
+    </div>
+    <div class="boix boix4"></div>
+    <div class="boix boix5">
+        <hr>
+        <h3>Trending Topics</h3>
+        <a href="pygame/1" class="trending"><span>Pygame</span></a>
+        <a href="socket/1" class="trending"><span>Sockets</span></a>
+        <a href="django/1" class="trending"><span>Django</span></a>
+        <hr>
+    </div>
+    <div class="boix boix6">
+        <h3>Featured Plays</h3>
+        <div class="topics">
+        <button class="comp comp1" onclick="location.href='socket/1';"><div class="mine">SOCKET</div></button>
+        <button class="comp comp2" onclick="location.href='javascript';"><div class="mine">JAVASCRIPT</div></button>
+        <button class="comp comp3" onclick="location.href='gitandvsc/1';"><div class="mine">GIT AND VSC</div></button>
+        </div>
+        <hr>
+    </div>
+    <div class="boix boix7"></div>
+</div>
+
+
+<div class="footerr">
+    <div class="coll coll1"><a class="headin" href="https://www.youtube.com/channel/UCIehHDtMHU7mktmaNcA4mxQ?sub_confirmation=1"><b><u>CODEGREY</u></b></a></div>
+    <div class="coll coll2"></div>
+    <div class="coll coll3">
+        <a class="botlink" href="contact">-contact</a><br>
+        <a class="botlink" href="working with us">-join the team</a><br>
+        <a class="botlink" href="promoting your work">-promote your work</a><br>
+        <a class="botlink" href="certificatons">-get certified</a><br>
+    </div>
+    <div class="coll coll4">
+        <a class="botlink">-create a developers account</a><br>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
