@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link rel="stylesheet" href="{% static 'static/all.css' %}"-->
+    <link rel="stylesheet" href="static/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <title>CODEGREY | Courses</title>
+</head>
+<body>
+
+<div class="nava">
+<nav class="navbar navbar-inverse"> 
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+            </button>
+        <a class="headin" href="{% url 'home' %}"><b><u>GREYCOLOR</u></b></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+            <li class="active"><a href="{% url 'home' %}">Home</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'home' %}">Courses<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="pygame/1">Pygame</a></li>
+                    <li><a href="socket/1">Socket</a></li>
+                    <li><a href="djangocc/1">Django Crash Course</a></li>
+                    <li><a href="gitandvsc/1">Git and VSCode</a></li>
+                </ul>
+            </li>
+            <li><a href="certifications">Certification</a></li>
+            <!--li><a href="#">Nothing</a></li-->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <!--li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li-->
+            <li><a href="working with us">JOIN THE TEAM</a></li>
+        </ul>
+        </div>
+    </div>
+</nav>
+</div>
+
+<br><br><br><br><br>
+<center><h1>COURSES AVAILABLE</h1></center>
+<br>
+
+<div class="topics">
+    <button class="comp comp1" onclick="location.href='socket/1';"><div class="mine">SOCKET</div></button>
+    <button class="comp comp2" onclick="location.href='pygame/1';"><div class="mine">PYGAME</div></button>
+    <button class="comp comp3" onclick="location.href='gitandvsc/1';"><div class="mine">GIT AND VSC</div></button>
+    <button class="comp comp4" onclick="location.href='djangocc/1';"><div class="mine">DJANGO CRASH COURSE</div></button>
+</div>
+<center><h1>OTHER COURSES</h1></center><br>
+<div class="topics">
+    <button class="comp comp5" onclick="unavail()"><div class="mine">PYTHON OOPS</div></button>
+    <button class="comp comp6" onclick="unavail()"><div class="mine">SELENIUM</div></button>
+    <button class="comp comp7" onclick="unavail()"><div class="mine">DJANGO</div></button>
+    <button class="comp comp8" onclick="unavail()"><div class="mine">CSS</div></button>
+</div>
+
+<br><br><br>
+
+
+<script>
+    const unavail=()=>{alert("THESE COURSES ARE NOT YET AVAILABLE!");}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="{% static 'static/homer.css' %}">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="{% static 'static/small.css' %}">
+    <!--link rel="stylesheet" href="{% static 'static/all.css' %}"-->
+    <!--link rel="stylesheet" href="static/homer.css">
+    <link rel="stylesheet" media="screen and (min-width: 600px)" href="{% static 'static/homer.css' %}">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="static/hmall.css"-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <title>CODEGREY | {{optup}}</title>
+</head>
+<body>
+
+<div class="nava">
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+            </button>
+        <a class="headin"><b><u>GREYCOLOR</u></b></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+            <li class="active"><a href="{% url 'home' %}">Home</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">Courses<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                <li><a href="{% url 'navigate' %}">VIEW ALL</a></li>
+                <hr>
+                <li><a href="pygame/1">Pygame</a></li>
+                <li><a href="socket/1">Socket</a></li>
+                <li><a href="djangocc/1">Django Crash Course</a></li>
+                <li><a href="gitandvsc/1">Git and VSCode</a></li>
+                </ul>
+            </li>
+            <li><a href="certifications">Certification</a></li>
+            <!--li><a href="#">Nothing</a></li-->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <!--li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li-->
+            <li><a href="working with us">JOIN THE TEAM</a></li>
+        </ul>
+        </div>
+    </div>
+</nav>
+</div>
+
+<br><br>
+<div class="major">
+
+<div class="lefter">
+    <div class="boix boix1"></div>
+    <div class="boix boix2">
+        <p class="quote">Connect! Learn! Grow!</p>
+    </div>
+    <div class="boix boix3">
+    <p><h3>Let us know your mail id. We will connect you within 6 days regarding {{option}}.</h3></p>
+    <form method="POST">
+        {% csrf_token %}
+    <input name="ied" style="width: 50%; padding: 10px; border-radius: 20px; border: 0px; font-size: 15px; background-color: rgb(80, 80, 80); outline: none;">
+    <input name="option" type="hidden" value="{{option}}" readonly>
+    <input type="submit" style="color:white; border: 0px; font-size: 18px; background-color: rgb(37,37,37); outline: none;">
+    </form>
+    </div>
+    <div class="boix boix4"></div>
+    <div class="boix boix5"></div>
+</div>
+
+</div>
+<div class="footerr">
+    <div class="coll coll1"><a class="headin" href="https://www.youtube.com/channel/UCIehHDtMHU7mktmaNcA4mxQ?sub_confirmation=1"><b><u>CODEGREY</u></b></a></div>
+    <div class="coll coll2"><a class="headin" href="{% url 'home' %}"><b><u>GREYCOLOR</u></b></a></div>
+</div>
+
+</div>
+</body>
+</html>
